@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfDNSMvvM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfDNSMvvM"
+        xmlns:vm ="clr-namespace:ViewModelsMvvm.WpfDNSMvvM.ViewModel;assembly=ViewsLibrary"
+        mc:Ignorable="d"
+        Icon="/1.png"
+        DataContext="{DynamicResource vmmain}"
+        Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <vm:MainWindowVM x:Key="vmmain"/>
+    </Window.Resources>
+    
+    <StackPanel>
+        <StackPanel Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Image Width="110" VerticalAlignment="Center" HorizontalAlignment="Right" Source="/1.png" Margin="10" Height="98"/>
+            <Label Content="Барахолка ППК" FontSize="70" FontFamily="Comic Sans MS" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <Image Source="/1.png" Height="100" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10"/>
+        </StackPanel>
+        <StackPanel>
+            <Button Content = "CPU" Command="{Binding AddCpu}"  Width="auto"/>
+            <Label/>
+            <Button Content = "GPU" Command="{Binding AddGpu}" Width="auto"/>
+        </StackPanel>
+    </StackPanel>
+</Window>

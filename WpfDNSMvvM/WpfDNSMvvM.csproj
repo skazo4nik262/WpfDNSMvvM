@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="1.jpg" />
+    <None Remove="1.png" />
+    <None Remove="hot.jpg" />
+    <None Remove="hot2.jpg" />
+    <None Remove="hot3.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ViewsLibrary\ViewsLibrary.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="1.png" />
+    <Resource Include="hot.jpg" />
+    <Resource Include="hot2.jpg" />
+    <Resource Include="hot3.jpg" />
+  </ItemGroup>
+
+</Project>
